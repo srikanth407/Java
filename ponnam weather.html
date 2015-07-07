@@ -1,0 +1,95 @@
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+<script src="yahooWeather.js"></script>
+
+</head>
+
+<body>
+<div class="jumbotron">
+<div class="container" ng-app="mymovieapp" ng-controller="abccontroller">
+<div class="row">
+<form class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Pin Code...." ng-model="moviename">
+  </div>  
+  <button type="submit" class="btn btn-default" ng-click="onClick()">Search</button>  
+</form>
+</div>
+
+<div class="row">
+<div ng-repeat="city in movies">
+
+<div class="table-responsive">
+      
+        <table  style="width:100%">
+  <tr>
+  <th>Condition</th> 
+  
+  
+    <th>Date</th>
+    <th>Day</th>
+    <th>High</th>
+    <th>Low</th>
+    <th>status</th>
+  </tr>
+  <tr>
+  <td><img alt="" src="http://l.yimg.com/a/i/us/we/52/{{city.query.results.channel.item.forecast[0].code}}.gif"></td>
+    <td>{{city.query.results.channel.item.forecast[0].date}}</td>
+    <td>{{city.query.results.channel.item.forecast[0].day}}</td>
+    <td>{{city.query.results.channel.item.forecast[0].high}}</td>
+    <td>{{city.query.results.channel.item.forecast[0].low}}</td>
+    <td>{{city.query.results.channel.item.forecast[0].text}}</td>
+    
+  </tr>
+  
+  <tr>
+  <td><img alt="" src="http://l.yimg.com/a/i/us/we/52/{{city.query.results.channel.item.forecast[1].code}}.gif"></td>
+    <td>{{city.query.results.channel.item.forecast[1].date}}</td>
+    <td>{{city.query.results.channel.item.forecast[1].day}}</td>
+    <td>{{city.query.results.channel.item.forecast[1].high}}</td>
+    <td>{{city.query.results.channel.item.forecast[1].low}}</td>
+    <td>{{city.query.results.channel.item.forecast[1].text}}</td>
+    
+  </tr>
+  
+  <tr>
+  <td><img alt="" src="http://l.yimg.com/a/i/us/we/52/{{city.query.results.channel.item.forecast[2].code}}.gif"></td>
+    <td>{{city.query.results.channel.item.forecast[2].date}}</td>
+    <td>{{city.query.results.channel.item.forecast[2].day}}</td>
+    <td>{{city.query.results.channel.item.forecast[2].high}}</td>
+    <td>{{city.query.results.channel.item.forecast[2].low}}</td>
+    <td>{{city.query.results.channel.item.forecast[2].text}}</td>
+    
+  </tr>
+  
+  <tr>
+  <td><img alt="" src="http://l.yimg.com/a/i/us/we/52/{{city.query.results.channel.item.forecast[3].code}}.gif"></td>
+    <td>{{city.query.results.channel.item.forecast[3].date}}</td>
+    <td>{{city.query.results.channel.item.forecast[3].day}}</td>
+    <td>{{city.query.results.channel.item.forecast[3].high}}</td>
+    <td>{{city.query.results.channel.item.forecast[3].low}}</td>
+    <td>{{city.query.results.channel.item.forecast[3].text}}</td>
+    
+  </tr>
+  
+  <tr>
+  <td><img alt="" src="http://l.yimg.com/a/i/us/we/52/{{city.query.results.channel.item.forecast[4].code}}.gif"></td>
+    <td>{{city.query.results.channel.item.forecast[4].date}}</td>
+    <td>{{city.query.results.channel.item.forecast[4].day}}</td>
+    <td>{{city.query.results.channel.item.forecast[4].high}}</td>
+    <td>{{city.query.results.channel.item.forecast[4].low}}</td>
+    <td>{{city.query.results.channel.item.forecast[4].text}}</td>
+    
+  </tr>
+</table>
+
+</div>
+
+</div>
+
+
+
+</body>
+</html>
